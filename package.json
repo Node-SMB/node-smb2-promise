@@ -1,10 +1,11 @@
 {
   "name": "@marsaud/smb2-promise",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "smb2 methods as promises",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/.bin/babel --source-maps --out-dir=. src",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -29,10 +30,6 @@
     "bluebird": "^3.1.1",
     "lodash.foreach": "^3.0.3",
     "lodash.isfunction": "^3.0.6"
-  },
-  "scripts": {
-    "build": "./node_modules/.bin/babel --source-maps --out-dir=. src",
-    "prepublish": "npm run build"
   },
   "devDependencies": {
     "babel": "^5.8.34",
