@@ -3,6 +3,11 @@ import Bluebird from 'bluebird'
 import forEach from 'lodash.foreach'
 import isFunction from 'lodash.isfunction'
 
+// Sync methods, not to be promisified
+const syncs = {
+  'close': true
+}
+
 export default class Smb2Promise extends Smb2 {
   constructor (...args) {
     super()
@@ -11,7 +16,7 @@ export default class Smb2Promise extends Smb2 {
 }
 
 forEach(Smb2.prototype, (fn, name) => {
-  if (isFunction(fn)) {
+  if (isFunction(fn) && !(name in syncs)) {
     Smb2Promise.prototype[name] = Bluebird.promisify(fn)
   }
 })
