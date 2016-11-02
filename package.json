@@ -28,15 +28,15 @@
   "dependencies": {
     "@marsaud/smb2": "^0.7.2",
     "bluebird": "^3.1.1",
-    "lodash.foreach": "^3.0.3",
+    "lodash.foreach": "^4.5.0",
     "lodash.isfunction": "^3.0.6"
   },
   "devDependencies": {
-    "babel": "^5.8.34",
-    "babel-eslint": "^4.1.6",
-    "babel-runtime": "^5.8.34",
+    "babel": "^6.5.2",
+    "babel-eslint": "^7.1.0",
+    "babel-runtime": "^6.18.0",
     "source-map-support": "^0.4.0",
-    "standard": "^5.4.1"
+    "standard": "^8.5.0"
   },
   "standard": {
     "parser": "babel-eslint"
