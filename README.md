@@ -1,3 +1,1 @@
-# SMB2 Client for Node.js
-
-Same API than https://github.com/marsaud/node-smb2 with promises.
+__Deprecated:__ Use `@marsaud/smb2` directly.
